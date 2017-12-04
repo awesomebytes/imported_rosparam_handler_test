@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>imported_rosparam_handler_test</name>
+  <version>0.0.0</version>
+  <description>The imported_rosparam_handler_test package tests
+    the functionality of importing from another package .params file
+    it's params</description>
+
+  <maintainer email="Sammy.Pfeiffer@student.uts.edu.au">Sammy Pfeiffer</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>rosparam_handler</depend>
+  <depend>rosparam_handler_tutorial</depend>
+  <depend>dynamic_reconfigure</depend>
+
+
+</package>

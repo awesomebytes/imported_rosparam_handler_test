@@ -1,0 +1,11 @@
+#!/usr/bin/env python
+from rosparam_handler.parameter_generator_catkin import *
+gen = ParameterGenerator()
+# Do it at the start, as it overwrites all current params
+gen.initialize_from_file('rosparam_handler_tutorial', 'Demo.params')
+
+gen.add("some_other_param", paramtype="int",description="Awesome int", default=2, min=1, max=10, configurable=True)
+gen.add("non_configurable_thing", paramtype="int",description="Im not configurable", default=2, min=1, max=10, configurable=False)
+
+# Syntax : Package, Node, Config Name(The final name will be MyDummyConfig)
+exit(gen.generate("imported_rosparam_handler_test", "example_node", "Example"))
